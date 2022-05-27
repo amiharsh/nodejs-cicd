@@ -33,6 +33,6 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ IMAGE }}   
+          tags: ${{ env.IMAGE }}   
         env:
           IMAGE: ${{ secrets.DOCKERHUB_USERNAME }}/multisystem-backend:${{ steps.vars.outputs.sha_short }}
